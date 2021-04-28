@@ -45,7 +45,7 @@ public class CharacterSelect : MonoBehaviour
         }
     }
 
-    void ChangeCharacter(int x)
+    private  void ChangeCharacter(int x)
     {
         for (int i = 0; i < characterPrefabs.Length; i++)
         {
@@ -56,5 +56,10 @@ public class CharacterSelect : MonoBehaviour
                 //invisible
                 characterShow[i].SetActive(false);
         }
+    }
+
+    public GameObject getCharacter()
+    {
+        return characterShow[index];
     }
 }
